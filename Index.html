@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Train In The Desert</title>
+        <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <a-assets>
+                <a-asset-item id="trainMTL" src="./Assets/Train/obj.mtl"></a-asset-item>
+                <a-asset-item id="trainOBJ" src="./Assets/Train/tinker.obj"></a-asset-item>
+                <a-asset-item id="tracksMTL" src="./Assets/Tracks/obj.mtl"></a-asset-item>
+                <a-asset-item id="tracksOBJ" src="./Assets/Tracks/tinker.obj"></a-asset-item>
+            </a-assets>
+            <a-camera position="0 20 50" camera look-controls wasd-controls="acceleration:500; fly:true;"></a-camera>
+            <a-sky color="lightblue"></a-sky>
+            <a-circle id="floor" side="double" position="0 0 0" rotation="90 0 0" radius="250" shadow="recieve:true" visible="true" color="#BCA360"></a-circle>
+            <a-entity obj-model="obj:#trainOBJ; mtl:#trainMTL" position="0 0.75 0" scale="0.25 0.25 0.25" rotation="-90 0 0"></a-entity>
+            <a-entity obj-model="obj:#tracksOBJ; mtl:#tracksMTL" position="148 0.75 0" scale="0.25 0.25 0.25" rotation="-90 0 0"></a-entity>
+            <a-entity obj-model="obj:#tracksOBJ; mtl:#tracksMTL" position="-148 0.75 0" scale="0.25 0.25 0.25" rotation="-90 0 0"></a-entity>
+        </a-scene>
+    </body>
+</html>
